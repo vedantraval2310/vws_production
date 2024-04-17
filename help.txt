@@ -1,0 +1,69 @@
+ts file extension is used when you are creating functions, classes, reducers, etc., that do not require the use of JSX syntax and elements, whereas the . tsx file extension is used when you create a React component and use JSX elements and syntax.
+
+Static typing and oop - typescript than JavaScript
+
+created using next.js - npx create-next-app@latest
+We used shadcn/ui - Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
+node version manager 
+used  uploadthing for uploading documents to the severside   
+used clerk for the user management and authentication ( AWS like functionality)
+
+We created route group called (main) 
+    Agency
+    another routegroup called sign-in
+        Another routegroup which is dynamic path [[...sign-in]]
+        sign-up
+    subaccount
+
+using clerk we have to set middleware 
+so that we can see which path is set when signup is happen and which path we have to ignored
+
+Now site is public url That is the dashboard 
+    We took the reference from https://ui.ibelick.com/ 
+    Now created a navigationf site using components>site>navigation
+    and imported navigation to site>page.tsx
+    Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+
+Theme Provider is provided to change the thene of te page. It is put in app>layout.tsx 
+And toggle mode is put in component>site>navigation 
+
+All the routes are in middleware.ts
+
+prisma ORM Prisma ORM is a next-generation Node.js and TypeScript ORM that unlocks a new level of developer experience when working with databases thanks to its intuitive data model, automated migrations, type-safety & auto-completion. 
+
+Problem : Client being created everytime we reload 
+Solution : export const db = globalThis.prisma || new PrismaClient()
+
+Trigger , Automation , pipeline , tag are bonus points 
+
+ Unlike Prisma Migrate, db push does not generate migrations that you can modify to preserve data, and is therefore best suited for prototyping in a development environment. Continue to evolve your schema until it reaches a relatively stable state.
+
+use client in forms is because toast is client component
+
+react hook form ma pella use form ma shcema define karvani hoi pachhi eno use karvano hoi 
+
+all apiendpints are created in app/api 
+uploadthing mate lib>uploadthing 
+
+using zod we created to implement validation in forms shadcnui
+
+We created dashboad in agencyID routepage
+In the dashbopard we created side bar using custom sheet component and modal-provider custom 
+
+We created team, subaccounts, agency, etc. pages on the routes of their individual pages 
+
+Team is made using datatable react
+ 
+ react beautiful dnd 
+ 
+
+ future enhancements : 
+    being able to copy paste components
+    we can add backend directly.
+
+
+All the state menagement is done using custom model which we used as redux from scratch. 
+
+we used react-beatifuldnd for a static container.
+in website editor we have to use custom drag and drop as we need to drag a icon and drop a component in the work area.
+
