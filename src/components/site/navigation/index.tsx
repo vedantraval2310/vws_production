@@ -20,7 +20,6 @@ const Navigation = ({ user }: Props) => {
   };
 
   useEffect(() => {
-    // If you want to scroll to pricing section when the URL has "#pricing"
     if (window.location.hash === '#pricing') {
       scrollToPricing({preventDefault: () => {}});
     }
