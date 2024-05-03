@@ -10,6 +10,20 @@ type Props = {
 }
 
 const Navigation = ({ user }: Props) => {
+  const scrollToPricing = (e: { preventDefault: any }) => {
+    e.preventDefault();
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    // If you want to scroll to pricing section when the URL has "#pricing"
+    if (window.location.hash === '#pricing') {
+      scrollToPricing({preventDefault: () => {}});
+    }
+  }, []);
   return (
     <div className="fixed top-0 right-0 left-0 p-4 flex items-center justify-between z-10">
       <aside className="flex items-center gap-2">
